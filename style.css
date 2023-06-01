@@ -15,6 +15,7 @@ body{
     background-color: #e6e6ff;
 }
 .container{
+    position: relative;
     width: 100%;
     max-width: 800px;
     padding: 60px;
@@ -31,7 +32,7 @@ p{
     text-transform: uppercase;
 }
 
-h3{
+.content h3{
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 25px;
@@ -44,8 +45,10 @@ h3{
     background: rgba(255,255,255,0.15);
     box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
     backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.18);
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 
 .wrapper:hover{
@@ -94,9 +97,11 @@ h3{
     font-weight: 500;
     text-transform: uppercase;
     cursor: pointer;
-    transform: all 0.3s;
+    transform: all 0.3s ease;
     background: rgba(255,255,255,0.15);
     box-shadow: 0px 8px 32px 0 rgba(31,38,135,0.37);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
     border: 1px solid rgba(255,255,255,0.18);
 }
 .btn:active{
@@ -118,6 +123,18 @@ h3{
     margin: 0 auto;
     margin-top: 20px;
 }
+
+.laps::-webkit-scrollbar {
+    width: 5px;
+  }
+  .laps::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+  }
+  .laps::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+  }
 
 .laps .lap{
     width: 50%;
@@ -146,7 +163,7 @@ h3{
         font-size: 16px;
     }
 
-    .outer-wrapper{
+    .main-wrapper{
         padding: 20px 0;
     }
 
@@ -162,3 +179,23 @@ h3{
         font-size: 16px;
     }
 }
+@media (max-width: 400px) {
+    .container {
+      padding: 0 10px;
+    }
+    .content h3 {
+      font-size: 14px;
+    }
+    .main-wrapper {
+      padding: 10px 0;
+    }
+    .main-wrapper .head {
+      padding: 0 20px;
+    }
+    .main .number {
+      font-size: 40px;
+    }
+    .main .colon {
+      font-size: 12px;
+    }
+  }
